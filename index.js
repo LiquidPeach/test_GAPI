@@ -91,7 +91,7 @@ function parseMapData(schoolData, listTag, division) {
         // If '^^' is found, wrap the desired subtitle in a <span> element with a class. Class name is tentative
         if (subtitleInx !== -1) {
             let subttl = replaceNL.substring(2, replaceNL.indexOf('<br>'));
-            subtitleHTML = '<span class="sub-field">' + subttl + '</span><br>';
+            subtitleHTML = '<span class="subject">' + subttl + '</span><br>';
             text = replaceNL.substring(replaceNL.indexOf('<br>') + 4, replaceNL.length);
         }
         
