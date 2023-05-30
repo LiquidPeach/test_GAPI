@@ -12,8 +12,8 @@ function initClient() {
     // Initialize the Google Sheets API client
     gapi.client.init({
         //i create this apikey on Google console
-        apiKey: 'AIzaSyCss-4b1i0PHAQAjRwKvSN9yPADeaIQS_U',
-        clientId: '964029012495-squ1jhpunge1gvnart6dqintq6qbo1ev.apps.googleusercontent.com',
+        apiKey: '',
+        clientId: '',
         discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
     }).then(() => {
         readData();
@@ -32,7 +32,7 @@ function readData() {
     gapi.client.sheets.spreadsheets.values.get({
         //this id is unique for every sheet (is on the link)
         //NOTE:Google sheet has to be public *** you can also change the range 
-        spreadsheetId: '1_s_TiZGaR-WHfAV5KpKr4BJq0r61UTCsEcCQJuy_OSk',
+        spreadsheetId: '',
         range: 'Sheet1!A1:D82',
     }).then(response => {
         data = response.result.values;
