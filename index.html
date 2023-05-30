@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="index.js" type="module"></script>
 
@@ -9,37 +10,49 @@
 </head>
 <body>
 
-<h1>Graduation requirements</h1>
-<form id="school-form">
-  <label for="school-select">Select a School:</label>
-  <select id="school-select">
-    <option value="UC San Diego CSE B.S.">UCSD</option>
-    <option value="UC Los Angeles CS B.S.">UCLA</option>
-    <option value="UC Berkley CS B.A.">UCB B.A.</option>
-    <option value="UC Berkley EECS B.S.">UCB B.S.</option>
-    <option value="UC Irvine CS B.S.">UCI</option>
-    <option value="UC Davis CSE B.S.">UCD</option>
-    <option value="UC Riverside CS B.S.">UCR</option>
-    <option value="UC Merced CSE B.S.">UCM</option>
-    <!-- Add more options as needed -->
-  </select>
-  <button type="submit">Submit</button>
-</form>
+  <main>
+    <h1 id="title">Graduation requirements</h1>
 
-<table id="data-table">
-  <thead>
-    <tr>
-      <th>School</th>
-      <th>Program</th>
-      <th>Lower Division</th>
-      <th>Upper Division </th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+    <form id="school-form">
+      <label for="school-select">Select a School:</label>
+      <select id="school-select">
+        <option value="UC San Diego CSE B.S.">UCSD</option>
+        <option value="UC Los Angeles CS B.S.">UCLA</option>
+        <option value="UC Berkley CS B.A.">UCB B.A.</option>
+        <option value="UC Berkley EECS B.S.">UCB B.S.</option>
+        <option value="UC Irvine CS B.S.">UCI</option>
+        <option value="UC Davis CSE B.S.">UCD</option>
+        <option value="UC Riverside CS B.S.">UCR</option>
+        <option value="UC Merced CSE B.S.">UCM</option>
+        <!-- Add more options as needed -->
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <!-- School name -->
+    <h2 id="school-name-subtitle"></h2>
 
+    <!-- Lower Division -->
+    <section class="division">
+      <details class="hidden details-list">
+        <summary>Lower Division</summary>
+        <ul id="lower-division">
+          
+        </ul>
+      </details>
+    </section>
 
+    <!-- Upper Division -->
+    <section class="division">
+      <details class="hidden details-list">
+        <summary>Upper Division</summary>
+        <ul id="upper-division">
+          
+        </ul>
+      </details>
+    </section>
+    
+  </main>
 </body>
 
 </html>
